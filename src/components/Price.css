@@ -1,0 +1,125 @@
+.price {
+  padding-top: 7rem;
+  padding-bottom: 6rem;
+}
+
+.price__title {
+  text-align: center;
+  font-size: clamp(1.9rem, 4.2vw, 2.75rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.02em;
+}
+
+.price__intro {
+  text-align: center;
+  color: rgba(232, 238, 244, 0.82);
+  font-size: 1.15rem;
+  margin-bottom: 3rem;
+}
+
+.price__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.price__card {
+  position: relative;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(145deg, rgba(20, 35, 55, 0.6) 0%, rgba(10, 22, 40, 0.9) 100%);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.price__card:hover {
+  border-color: rgba(0, 212, 170, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 35px rgba(0, 212, 170, 0.08);
+}
+
+.price__card--main {
+  border-color: rgba(255, 159, 67, 0.3);
+  background: linear-gradient(145deg, rgba(30, 45, 65, 0.6) 0%, rgba(15, 28, 45, 0.95) 100%);
+}
+
+.price__card--main:hover {
+  border-color: rgba(255, 159, 67, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 40px rgba(255, 159, 67, 0.12);
+}
+
+.price__card-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.35rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0a1628;
+  background: linear-gradient(135deg, #ff9f43 0%, #ee5a24 100%);
+  border-radius: 50px;
+}
+
+.price__card-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.price__card-desc {
+  font-size: 0.9rem;
+  color: rgba(232, 238, 244, 0.7);
+  margin-bottom: 1.5rem;
+}
+
+.price__card-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #00d4aa;
+  letter-spacing: 0.02em;
+}
+
+.price__card--main .price__card-value {
+  color: #ff9f43;
+}
+
+.price__card-note {
+  font-size: 0.9rem;
+  color: rgba(232, 238, 244, 0.6);
+  margin: 0.5rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .price {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .price__intro {
+    margin-bottom: 2rem;
+  }
+
+  .price__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .price__card {
+    padding: 2rem 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .price__card-value {
+    font-size: 1.9rem;
+  }
+}

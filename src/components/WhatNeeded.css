@@ -1,0 +1,92 @@
+.what-needed {
+  padding-top: 7rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+
+.what-needed__title {
+  text-align: center;
+  font-size: clamp(1.9rem, 4.2vw, 2.75rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.02em;
+}
+
+.what-needed__intro {
+  text-align: center;
+  color: rgba(232, 238, 244, 0.82);
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+}
+
+.what-needed__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.what-needed__item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.75rem;
+  background: linear-gradient(145deg, rgba(20, 35, 55, 0.6) 0%, rgba(10, 22, 40, 0.8) 100%);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.what-needed__item:hover {
+  border-color: rgba(0, 212, 170, 0.4);
+  transform: translateX(5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.what-needed__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.what-needed__text {
+  color: rgba(232, 238, 244, 0.95);
+  font-size: 1rem;
+}
+
+.what-needed__deco {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  font-size: 4rem;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .what-needed {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .what-needed__intro {
+    margin-bottom: 2rem;
+  }
+
+  .what-needed__item {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .what-needed__deco {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .what-needed__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

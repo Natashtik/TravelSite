@@ -1,0 +1,124 @@
+.schedule {
+  padding-top: 7rem;
+  padding-bottom: 6rem;
+}
+
+.schedule__title {
+  text-align: center;
+  font-size: clamp(1.9rem, 4.2vw, 2.75rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.02em;
+}
+
+.schedule__intro {
+  text-align: center;
+  color: rgba(232, 238, 244, 0.82);
+  font-size: 1.15rem;
+  margin-bottom: 3rem;
+}
+
+.schedule__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.schedule__card {
+  position: relative;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(145deg, rgba(20, 35, 55, 0.8) 0%, rgba(10, 22, 40, 0.95) 100%);
+  border: 1px solid rgba(255, 159, 67, 0.25);
+  border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.schedule__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00d4aa, #ff9f43);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.schedule__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 159, 67, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 159, 67, 0.1);
+}
+
+.schedule__card:hover::before {
+  opacity: 1;
+}
+
+.schedule__card-day {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00d4aa;
+  margin-bottom: 0.5rem;
+}
+
+.schedule__card-time {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.schedule__card-time-value {
+  letter-spacing: 0.05em;
+}
+
+.schedule__card-tz {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(232, 238, 244, 0.6);
+}
+
+.schedule__card-group {
+  font-size: 0.95rem;
+  color: rgba(232, 238, 244, 0.9);
+}
+
+.schedule__card-deco {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 2rem;
+  opacity: 0.15;
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .schedule__intro {
+    margin-bottom: 2rem;
+  }
+
+  .schedule__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .schedule__card {
+    padding: 1.75rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule__card-time {
+    font-size: 1.75rem;
+  }
+}

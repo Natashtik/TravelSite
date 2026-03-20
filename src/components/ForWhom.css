@@ -1,0 +1,116 @@
+.for-whom {
+  padding-top: 7rem;
+  padding-bottom: 6rem;
+}
+
+.for-whom__title {
+  text-align: center;
+  font-size: clamp(1.9rem, 4.2vw, 2.75rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.875rem;
+  letter-spacing: -0.02em;
+}
+
+.for-whom__intro {
+  text-align: center;
+  color: rgba(232, 238, 244, 0.82);
+  font-size: 1.15rem;
+  margin-bottom: 4rem;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.for-whom__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.for-whom__card {
+  background: linear-gradient(155deg, rgba(18, 32, 52, 0.7) 0%, rgba(10, 22, 40, 0.9) 100%);
+  border: 1px solid rgba(0, 212, 170, 0.18);
+  border-radius: 20px;
+  padding: 2.75rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.for-whom__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4aa, #ff9f43);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.for-whom__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 212, 170, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 212, 170, 0.08);
+}
+
+.for-whom__card:hover::before {
+  opacity: 1;
+}
+
+.for-whom__card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 170, 0.2));
+}
+
+.for-whom__card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #00d4aa;
+  margin-bottom: 0.25rem;
+}
+
+.for-whom__card-grade {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff9f43;
+  margin-bottom: 1rem;
+}
+
+.for-whom__card-desc {
+  color: rgba(232, 238, 244, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .for-whom {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .for-whom__intro {
+    margin-bottom: 2.5rem;
+  }
+
+  .for-whom__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .for-whom__card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .for-whom__card {
+    padding: 1.75rem 1.25rem;
+  }
+}
